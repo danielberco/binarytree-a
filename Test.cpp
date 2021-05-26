@@ -46,17 +46,16 @@ TEST_CASE("Integer Part A ")
 }
 
 
-
 TEST_CASE("Integer Part B Sorting")
 {
   BinaryTree<int> treeInt;
 
-  CHECK_NOTHROW(treeInt.add_root(1));
+  CHECK_NOTHROW(treeInt.add_root(3));
   CHECK_NOTHROW(treeInt.add_root(2)); 
-  CHECK_NOTHROW(treeInt.add_root(3)); 
-  CHECK_NOTHROW(treeInt.add_left(2, 5));
-  CHECK_NOTHROW(treeInt.add_left(5, 4));
-  CHECK_NOTHROW(treeInt.add_right(5, 9));
+  CHECK_NOTHROW(treeInt.add_root(1)); 
+  CHECK_NOTHROW(treeInt.add_left(1, 9));
+  CHECK_NOTHROW(treeInt.add_left(9, 4));
+  CHECK_NOTHROW(treeInt.add_right(9, 5));
   CHECK_NOTHROW(treeInt.add_right(1, 3));
   CHECK_NOTHROW(treeInt.add_left(1, 2)); 
   CHECK_NOTHROW(cout << treeInt << endl);
@@ -92,7 +91,7 @@ TEST_CASE("Sorting String")
   BinaryTree<string> treeString;
 
   CHECK_NOTHROW(treeString.add_root("3"));
-  CHECK_NOTHROW(treeString.add_root("2"));
+  CHECK_NOTHROW(treeString.add_root("2")); 
   CHECK_NOTHROW(treeString.add_root("1")); 
   CHECK_NOTHROW(treeString.add_left("1", "9"));
   CHECK_NOTHROW(treeString.add_left("9", "4"));
@@ -132,16 +131,15 @@ TEST_CASE("Sorting  Char")
 {
   BinaryTree<char> treeChar;
 
-  CHECK_NOTHROW(treeChar.add_root('1'));
-  CHECK_NOTHROW(treeChar.add_root('2'));
   CHECK_NOTHROW(treeChar.add_root('3'));
-  CHECK_NOTHROW(treeChar.add_left('1', '4'));
-  CHECK_NOTHROW(treeChar.add_left('5', '9'));
-  CHECK_NOTHROW(treeChar.add_right('7', '6'));
-  CHECK_NOTHROW(treeChar.add_right('71', '73'));
-  CHECK_NOTHROW(treeChar.add_left('11', '12')); 
+  CHECK_NOTHROW(treeChar.add_root('2')); 
+  CHECK_NOTHROW(treeChar.add_root('1')); 
+  CHECK_NOTHROW(treeChar.add_left('1', '9'));
+  CHECK_NOTHROW(treeChar.add_left('9', '4'));
+  CHECK_NOTHROW(treeChar.add_right('9', '5'));
+  CHECK_NOTHROW(treeChar.add_right('1', '3'));
+  CHECK_NOTHROW(treeChar.add_left('1', '2')); 
   CHECK_NOTHROW(cout << treeChar << endl;);
-
   char pre[] = {'1', '2', '4', '5', '3'};
   char in[] = {'4', '2', '5', '1', '3'};
   char post[] = {'4', '5', '2', '3', '1'};
