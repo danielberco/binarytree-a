@@ -34,7 +34,7 @@ TEST_CASE (" Right -  pos order") {
     }
 }
 
-TEST_CASE("BinaryTree -Integer Part A ")
+TEST_CASE("Integer Part A ")
 {
     BinaryTree<int> tree_of_ints;
     CHECK_NOTHROW(tree_of_ints.add_root(7));
@@ -47,7 +47,7 @@ TEST_CASE("BinaryTree -Integer Part A ")
 
 
 
-TEST_CASE("BinaryTree - Integer Part B Sorting")
+TEST_CASE("Integer Part B Sorting")
 {
   BinaryTree<int> tree_of_ints;
 
@@ -87,7 +87,7 @@ TEST_CASE("BinaryTree - Integer Part B Sorting")
   }
 }
 
-TEST_CASE("BinaryTree - String")
+TEST_CASE("Sorting String")
 {
   BinaryTree<string> tree_of_strings;
 
@@ -128,7 +128,7 @@ TEST_CASE("BinaryTree - String")
 }
 
 
-TEST_CASE("BinaryTree - Char")
+TEST_CASE("Sorting Char")
 {
   BinaryTree<char> tree_of_chars;
 
